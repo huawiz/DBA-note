@@ -1,2 +1,3 @@
 # PowerShell-Note
-Powershell練習
+
+這邊存放PowerShell的相關筆記。
