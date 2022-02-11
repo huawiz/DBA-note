@@ -31,3 +31,18 @@
    -  `New-Alias` 自訂別名
 
 5. `$name` 是參數名稱
+
+
+## Ch5 Provider
+
+Provider(提供者)是指轉接器(adapter)，其設計就是把某些資料按照分類儲存，並使它看起來像磁碟機。
+
+例如`Get-PSProvider` 
+
+![Image](https://i.imgur.com/upy3xo5.png)
+
+`FileSystem` 指的就是最熟悉的C槽，它就是一種Provider。
+
+`Get-PSProvider` 查看Provider
+
+`Get-PSDrive` 查看現有的Provider
