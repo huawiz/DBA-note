@@ -13,13 +13,13 @@ Update-Module oh-my-posh
 
 
 MacOS install
-```powershell
+```PowerShell
 brew tap jandedobbeleer/oh-my-posh
 brew install oh-my-posh
 ```
 
 $profile
-```shell
+```PowerShell
 Import-Module posh-git
 Import-Module oh-my-posh
 oh-my-posh --init --shell pwsh --config $env:POSH_THEMES_PATH/tonybaloney.omp.json | Invoke-Expression
