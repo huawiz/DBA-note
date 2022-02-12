@@ -13,7 +13,7 @@ Update-Module oh-my-posh
 
 
 MacOS install
-```PowerShell
+```zsh
 brew tap jandedobbeleer/oh-my-posh
 brew install oh-my-posh
 ```
