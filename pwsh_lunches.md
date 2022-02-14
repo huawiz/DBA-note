@@ -32,7 +32,7 @@
 
 5. `$name` 是參數名稱
 
-
+ech
 ## Ch5 Provider
 
 Provider(提供者)是指轉接器(adapter)，其設計就是把某些資料按照分類儲存，並使它看起來像磁碟機。
@@ -46,3 +46,23 @@ Provider(提供者)是指轉接器(adapter)，其設計就是把某些資料按�
 `Get-PSProvider` 查看Provider
 
 `Get-PSDrive` 查看現有的Provider
+
+## Ch6 串接指令
+
+我們可以使用`|`來串接指令。例如
+
+`GET-PROCESS | EXPORT-CSV PROCESS.CSV`把GET-PROCESS得到的表格以csv檔案匯出。
+
+`Diff -referenceobject (Export-clixml reference.xml) -differenceobject (get-process) -property name` 抓xml進來和get-process依照name作比較
+
+- 輸出有很多形式，一般pwsh預設是印出來
+
+   即 `dir` = `dir | out-defalt`
+
+- 可以透過`>`來指定輸出位子，例如`dir > test.txt`，就可以把dir列出的表格印成`test.txt`
+
+- 可以透過CONVERT+OUTPUT指令，組成組合指令，把資料轉換成想要的格式檔案，例如
+   `get-process | convertTo-html | out-file test.html`
+
+- 可以使用`DIFF`指令來比較兩個檔案差異，例如
+   `Diff -referenceobject (Export-clixml reference.xml) -differenceobject (get-process) -property name` 抓xml進來和get-process依照name作比較
