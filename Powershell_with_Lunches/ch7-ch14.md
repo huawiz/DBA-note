@@ -12,3 +12,5 @@
 排序 `sort -property name -desc`
 選擇 `select -property name,xxID`
 取得物件`get-member` or `gm`
+
+s
