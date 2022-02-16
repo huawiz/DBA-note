@@ -29,3 +29,32 @@
 我就可以使用這招來改
 
 ![Image](https://i.imgur.com/htfd0ha.png)
+
+
+
+
+今天我只想從error_name抓下資料，那有兩種做法
+
+1. `foreach {$_.error_name}`
+
+2. `select -expandproperty error_name`
+
+![Image](https://i.imgur.com/hkIrYiZ.png)
+
+
+# ch10 格式化輸出
+
+`Formate-table` 可以用來讓顯示畫面更美觀，例如使用`-wrap`和`-autosize`。
+
+一開始預設是這樣，文字會被...省略，而且畫面沒有配合視窗
+
+![Image](https://i.imgur.com/77NQjwR.png)
+
+再來加入 `-autosize`
+
+![Image](https://i.imgur.com/fajgZO7.png)
+
+最後再加入`-wrap`，各列顯示內容換完全顯示。
+
+![Image](https://i.imgur.com/ilL58d7.png)
+
