@@ -58,3 +58,10 @@
 
 ![Image](https://i.imgur.com/ilL58d7.png)
 
+
+使用`-groupby`會使屬性變動時被分隔
+
+![Image](https://i.imgur.com/RHfzaPn.png)
+
+
+
