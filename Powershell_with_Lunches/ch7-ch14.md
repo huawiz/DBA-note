@@ -13,3 +13,19 @@
 選擇 `select -property name,xxID`
 取得物件`get-member` or `gm`
 
+
+# CH9 Object deep
+在匯入csv檔案時，可能會有物件名稱無法對應的問題。
+
+這時我們可以一個技巧來讓錯誤的csv屬性名稱對應到正確的屬性名稱
+
+`'@{name='Name';expression=$_.error_name}`
+
+
+例如今天import csv
+
+![Image](https://i.imgur.com/7XJEyoT.png)
+
+我就可以使用這招來改
+
+![Image](https://i.imgur.com/htfd0ha.png)
