@@ -63,5 +63,33 @@
 
 ![Image](https://i.imgur.com/RHfzaPn.png)
 
+另外還有`fl --> formate-list` 和 `fw --> formate-wide`
+
+
+# ch11 篩選與比較
+
+1. 任何get-開頭的cmdlet，都能使用filter，但是不建議直接搜尋 -filter *，如果叢集過大，會加劇伺服器負擔。
+
+把要搜尋的項目放左邊，然後搜尋要的文字樣子
+
+例如: `Get-ADComputer -filter "Name -filter '*DC'"`
+
+可以使用`where --> where-object`
+
+例如 `get-process --> where propertyname -eq 'vscode'`
+
+2. 比較運算
+
+`-eq` =
+`-ne` !=
+`ge` >= `le` <=
+`gt` > `lt`<
+`-ceq,-cne...` 可忽略大小寫，比較字串
+`-and` & `-or` |
+`-like` 可接受*字元
+`-match`字串與規則做比較
+
+詳細可看`about_comparison_operators`
+
 
 
