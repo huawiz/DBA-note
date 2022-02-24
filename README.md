@@ -1,6 +1,15 @@
 這邊存放PowerShell的相關筆記
 
+## 自學技巧
+這裡再複習一次如何自~救~學
 
+想知道pwsh有沒有xxx功能
+1. 先用`get-help`查詢看看
+2. 發現沒有，那用`get-command`看看
+3. 還是沒有，那去[PowerShell Gallery](http://powershellgallery.com)查查看有沒有人開發相關的套件
+4. 有了!使用`install-module`來安裝Plugin
+5. 在google之前，先搜尋看看作者有沒有寫相關說明文件
+6. 又學了一招，good
 
 ## 防止ps1檔案秒退的方法
 
