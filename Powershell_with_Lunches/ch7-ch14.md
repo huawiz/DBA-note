@@ -127,7 +127,7 @@
 
 # ch13 遠端控制
 
-需要連同一個AD
+需要連同一個AD、在同一個區域網路下
 
 1. `Enter-PSSession -computername` 遠端操控電腦
 
