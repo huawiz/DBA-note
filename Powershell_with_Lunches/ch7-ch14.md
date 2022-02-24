@@ -143,9 +143,11 @@
 
 4. 可以使用`get-adcomputer -filter * | select -expand name`來獲取電腦清單，接著拿來用組合技
 
+    ![Image](https://i.imgur.com/PfAueBh.png)
+
     例如:`Invoke-Command -command {get-process} -ComputerName (Get-ADComputer -filter * | select -expand name)`
 
     獲取ad computer list --> 全部執行get-process
 
-
+    ![Image](https://i.imgur.com/f8VsmyO.png)
     
