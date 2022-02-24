@@ -125,3 +125,25 @@
 
 
 
+# ch13
+
+1. `Enter-PSSession -computername` 遠端操控電腦
+
+
+2. `Exit-PSSession` 離開
+
+
+3. ` Invoke-Command` 可以直接對遠端電腦下指令
+
+    例如` Invoke-Command -ComputerName server1 -FilePath C:\Indexinfo.ps1 | ConvertTo-Html | Out-File test.html`
+    
+    從Server1撈資料-->運行Indexinfo.ps1-->轉成html-->存成test.html
+
+4. 可以使用`get-adcomputer -filter * | select -expand name`來獲取電腦清單，接著拿來用組合技
+
+    例如:`Invoke-Command -command {get-process} -ComputerName (Get-ADComputer -filter * | select -expand name)`
+
+    獲取ad computer list --> 全部執行get-process
+
+
+    
