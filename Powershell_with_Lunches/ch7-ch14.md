@@ -91,5 +91,26 @@
 
 詳細可看`about_comparison_operators`
 
+3. filter 
+
+搜尋特定格式的資料，例如`Get-Service | where status -eq 'running'`
+
+這只適用於簡單的情況，要複雜一點，還是需要`{}`和`$_`
+
+例如:`get-service | Where-Object -filter {$_.Status -eq 'running' -and  $_.DisplayName -like '*Network*'}`
+
+他會先運行`get-service`然後把結果丟給`where-object`進行filter:保留status = running 和 diplayname 包含 network的項目。
+
+# ch12 實際案例
+這裡再複習一次如何自~救~學
+
+想知道pwsh有沒有xxx功能
+1. 先用`get-help`查詢看看
+2. 發現沒有，那用`get-command`看看
+3. 還是沒有，那去[PowerShell Gallery](http://powershellgallery.com)查查看有沒有人開發相關的套件
+4. 有了!使用`install-module`來安裝Plugin
+5. 在google之前，先搜尋看看作者有沒有寫相關說明文件
+6. 又學了一招，good
+
 
 
