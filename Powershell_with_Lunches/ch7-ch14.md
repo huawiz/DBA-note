@@ -74,43 +74,43 @@
 
 1. 任何get-開頭的cmdlet，都能使用filter，但是不建議直接搜尋 -filter *，如果叢集過大，會加劇伺服器負擔。
 
-把要搜尋的項目放左邊，然後搜尋要的文字樣子
+    把要搜尋的項目放左邊，然後搜尋要的文字樣子
 
-例如: `Get-ADComputer -filter "Name -filter '*DC'"`
+    例如: `Get-ADComputer -filter "Name -filter '*DC'"`
 
-可以使用`where --> where-object`
+    可以使用`where --> where-object`
 
-例如 `get-process --> where propertyname -eq 'vscode'`
+    例如 `get-process --> where propertyname -eq 'vscode'`
 
 2. 比較運算
 
-`-eq` =
+    `-eq` =
 
-`-ne` !=
+    `-ne` !=
 
-`ge` >= `le` <=
+    `ge` >= `le` <=
 
-`gt` > `lt`<
+    `gt` > `lt`<
 
-`-ceq,-cne...` 可忽略大小寫，比較字串
+    `-ceq,-cne...` 可忽略大小寫，比較字串
 
-`-and` & `-or` |
+    `-and` & `-or` |
 
-`-like` 可接受*字元
+    `-like` 可接受*字元
 
-`-match`字串與規則做比較
+    `-match`字串與規則做比較
 
-詳細可看`about_comparison_operators`
+    詳細可看`about_comparison_operators`
 
 3. filter 
 
-搜尋特定格式的資料，例如`Get-Service | where status -eq 'running'`
+    搜尋特定格式的資料，例如`Get-Service | where status -eq 'running'`
 
-這只適用於簡單的情況，要複雜一點，還是需要`{}`和`$_`
+    這只適用於簡單的情況，要複雜一點，還是需要`{}`和`$_`
 
-例如:`get-service | Where-Object -filter {$_.Status -eq 'running' -and  $_.DisplayName -like '*Network*'}`
+    例如:`get-service | Where-Object -filter {$_.Status -eq 'running' -and  $_.DisplayName -like '*Network*'}`
 
-他會先運行`get-service`然後把結果丟給`where-object`進行filter:保留status = running 和 diplayname 包含 network的項目。
+    他會先運行`get-service`然後把結果丟給`where-object`進行filter:保留status = running 和 diplayname 包含 network的項目。
 
 # ch12 實際案例
 這裡再複習一次如何自~救~學
