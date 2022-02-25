@@ -34,7 +34,7 @@
 
 ![Image](https://i.imgur.com/htfd0ha.png)
 
-
+ex : `Import-csv .\SQLPerf_02110000.csv | select @{name='Time';expression={$_."(PDH-CSV 4.0) ("}}`
 
 
 今天我只想從error_name抓下資料，那有兩種做法
@@ -151,3 +151,5 @@
 
     ![Image](https://i.imgur.com/f8VsmyO.png)
     
+
+
